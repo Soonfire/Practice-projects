@@ -1,0 +1,22 @@
+.box {
+    height: 270px;
+    width: 270px;
+    outline: 2px;
+    outline-style: double;
+    outline-color: black;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box div {
+    height: 90px;
+    width: 90px;
+    background-color: lightblue;
+    outline: 1px;
+    outline-style: double;
+    outline-color: black;
+    text-align: center;
+    display: grid;
+    align-content: center;
+    font-size: 80px;
+}
