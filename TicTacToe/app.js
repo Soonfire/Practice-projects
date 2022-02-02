@@ -96,10 +96,12 @@ let timesClicked = 0;
     for  (let i = 0; i < boxes.length; i++)
         boxes[i].addEventListener("click", function onlyX() {
             timesClicked++;
-                if (timesClicked %2==0 && boxes[i].innerHTML.indexOf("X") != -1) {
+                if (timesClicked %2==0) {
                     boxes[i].innerHTML="X";
+
+
                 }
-                else (boxes[i].innerHTML.indexOf("O") != -1) ;{
+                else {
                     boxes[i].innerHTML="O";
                 }
         
