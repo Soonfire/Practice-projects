@@ -91,19 +91,50 @@ document.addEventListener('DOMContentLoaded',  (event) => {
 }); */
 document.addEventListener('DOMContentLoaded', () => {
 let boxes = document.getElementsByClassName('box');
-let clicked = false;
 let timesClicked = 0;
     for  (let i = 0; i < boxes.length; i++)
         boxes[i].addEventListener("click", function onlyX() {
             timesClicked++;
+            console.log(boxes[i].length)
                 if (timesClicked %2==0) {
                     boxes[i].innerHTML="X";
-
+                    boxes[i].classList.add("disableClick");
 
                 }
                 else {
                     boxes[i].innerHTML="O";
+                    boxes[i].classList.add("disableClick");
                 }
-        
+        let container = document.querySelector(".container");
+        if (boxes[0].innerHTML.indexOf("X")== false&& boxes[1].innerHTML.indexOf("X")== false&& boxes[2].innerHTML.indexOf("X")== false|| 
+            boxes[3].innerHTML.indexOf("X")== false&& boxes[4].innerHTML.indexOf("X")== false&& boxes[5].innerHTML.indexOf("X")== false|| 
+            boxes[6].innerHTML.indexOf("X")== false&& boxes[7].innerHTML.indexOf("X")== false&& boxes[8].innerHTML.indexOf("X")== false|| 
+            boxes[0].innerHTML.indexOf("X")== false&& boxes[3].innerHTML.indexOf("X")== false&& boxes[6].innerHTML.indexOf("X")== false|| 
+            boxes[1].innerHTML.indexOf("X")== false&& boxes[4].innerHTML.indexOf("X")== false&& boxes[7].innerHTML.indexOf("X")== false|| 
+            boxes[2].innerHTML.indexOf("X")== false&& boxes[5].innerHTML.indexOf("X")== false&& boxes[8].innerHTML.indexOf("X")== false|| 
+            boxes[0].innerHTML.indexOf("X")== false&& boxes[4].innerHTML.indexOf("X")== false&& boxes[8].innerHTML.indexOf("X")== false|| 
+            boxes[2].innerHTML.indexOf("X")== false&& boxes[4].innerHTML.indexOf("X")== false&& boxes[6].innerHTML.indexOf("X")== false
+            ){
+                container.classList.add("disableClick");
+                alert("Player X winRAR!")
+            }
+        else if (boxes[0].innerHTML.indexOf("O")== false && boxes[1].innerHTML.indexOf("O")== false && boxes[2].innerHTML.indexOf("O")== false || 
+        boxes[3].innerHTML.indexOf("O")== false && boxes[4].innerHTML.indexOf("O")== false && boxes[5].innerHTML.indexOf("O")== false || 
+        boxes[6].innerHTML.indexOf("O")== false && boxes[7].innerHTML.indexOf("O")== false && boxes[8].innerHTML.indexOf("O")== false || 
+        boxes[0].innerHTML.indexOf("O")== false && boxes[3].innerHTML.indexOf("O")== false && boxes[6].innerHTML.indexOf("O")== false || 
+        boxes[1].innerHTML.indexOf("O")== false && boxes[4].innerHTML.indexOf("O")== false && boxes[7].innerHTML.indexOf("O")== false || 
+        boxes[2].innerHTML.indexOf("O")== false && boxes[5].innerHTML.indexOf("O")== false && boxes[8].innerHTML.indexOf("O")== false || 
+        boxes[0].innerHTML.indexOf("O")== false && boxes[4].innerHTML.indexOf("O")== false && boxes[8].innerHTML.indexOf("O")== false || 
+        boxes[2].innerHTML.indexOf("O")== false && boxes[4].innerHTML.indexOf("O")== false && boxes[6].innerHTML.indexOf("O")== false
+            ){
+            container.classList.add("disableClick");
+            alert("Player O winRAR!")
+        }
+        else if (boxes[0].innerHTML !== "" && boxes[1].innerHTML !== "" && boxes[2].innerHTML !== "" &&
+                boxes[3].innerHTML !== "" && boxes[4].innerHTML !== "" && boxes[5].innerHTML !== "" &&
+                boxes[6].innerHTML !== "" && boxes[7].innerHTML !== "" && boxes[8].innerHTML !== "" 
+        ); {
+            alert("Draw!")
+        }
     });
 });
