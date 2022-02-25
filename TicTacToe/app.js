@@ -10,11 +10,9 @@
     square.onclick = function() {
         timesClicked++;
         if (timesClicked%2==0) {
-            square.innerHTML="X"
-        }
+            squa     }
         else {
-            square.innerHTML="O"
-        }
+            squa     }
     } */
 
 
@@ -26,11 +24,9 @@ for (square of squares) {
     square.onclick = function() {
     timesClicked++;
     if (timesClicked%2==0) {
-        square.innerHTML="X"
-    }
+        squa }
     else {
-        square.innerHTML="O"
-    }
+        squa }
 }
 }
 });  */
@@ -50,11 +46,9 @@ let timesClicked = 0;
 function cross (event) {
     timesClicked++;
     if (timesClicked%2==0) {
-        square.innerHTML="X"
-    }
+        squa }
     else {
-        square.innerHTML="O"
-    }
+        squa }
 }
 let square = document.querySelector('.container').children
 addEventListener("click", cross)
@@ -77,11 +71,9 @@ document.addEventListener('DOMContentLoaded',  (event) => {
     function cross (event) {
         timesClicked++;
         if (timesClicked%2==0) {
-            squares.innerHTML[i]="X"
-        }
+            squares        }
         else {
-            squares.innerHTML[i]="O"
-        }
+            squares        }
     }
     }
 
@@ -95,7 +87,6 @@ let timesClicked = 0;
     for  (let i = 0; i < boxes.length; i++)
         boxes[i].addEventListener("click", function onlyX() {
             timesClicked++;
-            console.log(boxes[i].length)
                 if (timesClicked %2==0) {
                     boxes[i].innerHTML="X";
                     boxes[i].classList.add("disableClick");
@@ -107,13 +98,13 @@ let timesClicked = 0;
                 }
         let container = document.querySelector(".container");
         if (boxes[0].innerHTML.indexOf("X")== false&& boxes[1].innerHTML.indexOf("X")== false&& boxes[2].innerHTML.indexOf("X")== false|| 
-            boxes[3].innerHTML.indexOf("X")== false&& boxes[4].innerHTML.indexOf("X")== false&& boxes[5].innerHTML.indexOf("X")== false|| 
-            boxes[6].innerHTML.indexOf("X")== false&& boxes[7].innerHTML.indexOf("X")== false&& boxes[8].innerHTML.indexOf("X")== false|| 
-            boxes[0].innerHTML.indexOf("X")== false&& boxes[3].innerHTML.indexOf("X")== false&& boxes[6].innerHTML.indexOf("X")== false|| 
-            boxes[1].innerHTML.indexOf("X")== false&& boxes[4].innerHTML.indexOf("X")== false&& boxes[7].innerHTML.indexOf("X")== false|| 
-            boxes[2].innerHTML.indexOf("X")== false&& boxes[5].innerHTML.indexOf("X")== false&& boxes[8].innerHTML.indexOf("X")== false|| 
-            boxes[0].innerHTML.indexOf("X")== false&& boxes[4].innerHTML.indexOf("X")== false&& boxes[8].innerHTML.indexOf("X")== false|| 
-            boxes[2].innerHTML.indexOf("X")== false&& boxes[4].innerHTML.indexOf("X")== false&& boxes[6].innerHTML.indexOf("X")== false
+        boxes[3].innerHTML.indexOf("X")== false&& boxes[4].innerHTML.indexOf("X")== false&& boxes[5].innerHTML.indexOf("X")== false|| 
+        boxes[6].innerHTML.indexOf("X")== false&& boxes[7].innerHTML.indexOf("X")== false&& boxes[8].innerHTML.indexOf("X")== false|| 
+        boxes[0].innerHTML.indexOf("X")== false&& boxes[3].innerHTML.indexOf("X")== false&& boxes[6].innerHTML.indexOf("X")== false|| 
+        boxes[1].innerHTML.indexOf("X")== false&& boxes[4].innerHTML.indexOf("X")== false&& boxes[7].innerHTML.indexOf("X")== false|| 
+        boxes[2].innerHTML.indexOf("X")== false&& boxes[5].innerHTML.indexOf("X")== false&& boxes[8].innerHTML.indexOf("X")== false|| 
+        boxes[0].innerHTML.indexOf("X")== false&& boxes[4].innerHTML.indexOf("X")== false&& boxes[8].innerHTML.indexOf("X")== false|| 
+        boxes[2].innerHTML.indexOf("X")== false&& boxes[4].innerHTML.indexOf("X")== false&& boxes[6].innerHTML.indexOf("X")== false
             ){
                 container.classList.add("disableClick");
                 alert("Player X winRAR!")
@@ -130,11 +121,32 @@ let timesClicked = 0;
             container.classList.add("disableClick");
             alert("Player O winRAR!")
         }
-        else if (boxes[0].innerHTML !== "" && boxes[1].innerHTML !== "" && boxes[2].innerHTML !== "" &&
-                boxes[3].innerHTML !== "" && boxes[4].innerHTML !== "" && boxes[5].innerHTML !== "" &&
-                boxes[6].innerHTML !== "" && boxes[7].innerHTML !== "" && boxes[8].innerHTML !== "" 
-        ); {
+        else if(timesClicked === 9) {
             alert("Draw!")
         }
     });
 });
+
+/* document.addEventListener('DOMContentLoaded', () => {
+    const boxes = document.getElementsByClassName('box');
+    let clickCount = 0;
+    let i = 0;
+    
+        boxes[i].addEventListener('click', changeBox);
+            function changeBox() {
+                clickCount ++;
+                if (clickCount % 2 === 0) {
+                    boxes[i].innerHTML = "O"
+                    i++
+                }
+                else if (clickCount === 9) {
+                    alert("It's a draw!")
+                }
+                else {
+                    boxes[i].innerHTML = "X"
+                    i++
+                }
+            } 
+
+}) */
+

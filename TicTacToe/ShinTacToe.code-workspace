@@ -6,5 +6,8 @@
 		{
 			"path": "C:\\Users\\Shin\\courseratest\\site"
 		}
-	]
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "TicTacToe"
+	}
 }
